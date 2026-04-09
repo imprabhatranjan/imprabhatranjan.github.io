@@ -1,73 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prabhat Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prabhat | DevOps Engineer</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1em;
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #020617;
+            color: #e2e8f0;
+            scroll-behavior: smooth;
         }
-        .container {
-            padding: 20px;
-        }
-        .image-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .image-container img {
-            width: 50%;
-            border-radius: 8px;
-        }
-        .description {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px;
+
+        nav {
             position: fixed;
-            bottom: 0;
+            top: 0;
             width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 40px;
+            background: rgba(2, 6, 23, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #38bdf8;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #020617, #1e293b);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #94a3b8;
+        }
+
+        .btn {
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #38bdf8;
+            border-radius: 30px;
+            color: black;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 100px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 15px;
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .skills span {
+            display: inline-block;
+            background: #334155;
+            padding: 10px 15px;
+            margin: 8px;
+            border-radius: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+        }
+
+        a {
+            color: #38bdf8;
         }
     </style>
 </head>
+
 <body>
 
+    <nav>
+        <div><strong>Prabhat</strong></div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
     <header>
-        <h1>Welcome to Prabhat's Page</h1>
+        <h1 data-aos="fade-up">Hi, I'm Prabhat 👋</h1>
+        <p data-aos="fade-up" data-aos-delay="200">DevOps Engineer | Kubernetes | Terraform | Cloud</p>
+        <a href="#projects" class="btn" data-aos="zoom-in" data-aos-delay="400">View Work</a>
     </header>
 
-    <div class="container">
-        <div class="image-container">
-            <img src="https://via.placeholder.com/600x300" alt="Prabhat Image">
+    <section id="about">
+        <h2 data-aos="fade-up">About Me</h2>
+        <div class="card" data-aos="fade-up">
+            <p>
+                DevOps Engineer focused on building scalable, automated cloud systems.
+                Strong expertise in Kubernetes, Terraform, CI/CD and production-grade infrastructure.
+            </p>
         </div>
+    </section>
 
-        <div class="description">
-            <h2>About Prabhat</h2>
-            <p>Prabhat is passionate about technology, innovation, and creativity. This page is a simple representation of his interests and journey. Stay tuned for updates, articles, and exciting content that will be shared here!</p>
+    <section>
+        <h2 data-aos="fade-up">Skills</h2>
+        <div class="skills" data-aos="fade-up">
+            <span>Azure</span>
+            <span>Kubernetes</span>
+            <span>Docker</span>
+            <span>Terraform</span>
+            <span>CI/CD</span>
+            <span>Python</span>
+            <span>Bash</span>
         </div>
-    </div>
+    </section>
 
-    <div class="footer">
-        <p>&copy; 2025 Prabhat. All rights reserved.</p>
-    </div>
+    <section id="projects">
+        <h2 data-aos="fade-up">Projects</h2>
+        <div class="grid">
+
+            <div class="card" data-aos="zoom-in">
+                <h3>Kubernetes Production System</h3>
+                <p>Highly available deployment with ingress, scaling & monitoring.</p>
+            </div>
+
+            <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                <h3>Terraform Infra Automation</h3>
+                <p>Multi-environment Azure infrastructure using modular Terraform.</p>
+            </div>
+
+            <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>CI/CD Pipeline</h3>
+                <p>Automated build, test, deploy using GitHub Actions & Azure DevOps.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 data-aos="fade-up">Contact</h2>
+        <div class="card" data-aos="fade-up">
+            <p>LinkedIn: <a href="https://linkedin.com/in/imprabhatranjan" target="_blank">imprabhatranjan</a></p>
+            <p>GitHub: <a href="https://github.com/YOUR_USERNAME" target="_blank">YOUR_USERNAME</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Prabhat Ranjan Choudhary</p>
+    </footer>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
 
 </body>
+
 </html>
-
-
-
